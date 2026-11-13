@@ -236,19 +236,6 @@ body{overflow-x:clip;font-size:16px}
 
 /* ===== BUG-FIX PATCH — 2026-11-13 ===== */
 
-/* BUG-02: Hero header — make the sticky header blend with the dark navy hero on the homepage.
-   The [data-page="home"] attribute is set on <body> in index.html only. */
-[data-page="home"] .header{transition:background .3s,box-shadow .25s,border-color .3s}
-[data-page="home"] .header:not(.scrolled){background:rgba(7,27,46,.78);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.07)}
-[data-page="home"] .header:not(.scrolled) .nav-link{color:#c5d8e8}
-[data-page="home"] .header:not(.scrolled) .nav-link:hover,[data-page="home"] .header:not(.scrolled) .nav-link.active{color:#fff}
-[data-page="home"] .header:not(.scrolled) .services-expander{color:#a8cbde}
-[data-page="home"] .header:not(.scrolled) .mega{background:#0d2438;border-color:#ffffff14}
-[data-page="home"] .header:not(.scrolled) .mega-links a{color:#ccdde8}
-[data-page="home"] .header:not(.scrolled) .mega-links a:hover{background:rgba(255,255,255,.08);color:#fff}
-[data-page="home"] .header:not(.scrolled) .mega>div:first-child b{color:#fff}
-[data-page="home"] .header:not(.scrolled) .nav-cta{background:var(--green);color:#0c2810;border-color:transparent}
-
 /* BUG-04: Newsletter section */
 .newsletter-section .newsletter-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .newsletter-section .newsletter-inner>div p{color:var(--muted);max-width:480px}
@@ -271,9 +258,7 @@ body{overflow-x:clip;font-size:16px}
 }
 @media(max-width:600px){
   .newsletter-section .newsletter-inner{gap:24px}
-  [data-page="home"] .header:not(.scrolled) .mega{background:#fff}
-  [data-page="home"] .header:not(.scrolled) .mega-links a{color:#172A3B}
-}
+  }
 
 /* Dropdown Chevron Icon */
 .services-expander{display:inline-flex;align-items:center;justify-content:center}
